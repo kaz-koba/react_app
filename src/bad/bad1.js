@@ -1,6 +1,6 @@
 // app.js
-const mysql = require('mysql');
-const connection = mysql.createConnection({
+import { createConnection } from 'mysql';
+const connection = createConnection({
   host: 'ホスト名',
   user: 'ユーザー名',
   password: 'パスワード',
