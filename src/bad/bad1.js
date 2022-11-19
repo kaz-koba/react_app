@@ -5,6 +5,7 @@ export const click = () => {
     connection.query(query, (err, rows) => {
       if (err) throw err;
       response.json({ data: rows });
+      response.json({ data: rows });
     });
   });
 };
