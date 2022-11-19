@@ -1,20 +1,8 @@
-// app.js
-import { createConnection } from 'mysql';
-const connection = createConnection({
-  host: 'ホスト名',
-  user: 'ユーザー名',
-  password: 'パスワード',
-  database: 'データベース名'
+app.post("/records", (request, response) => {
+  const data = request.body;
+  const query = `SELECT * FROM health_records WHERE id = (${data.id})`;
+  connection.query(query, (err, rows) => {
+    if(err) throw err;
+    response.json({data:rows});
+  });
 });
-connection.connect((err) => {
-  if (err) throw err;
-  console.log('Connected!');
-});
- 
-connection.query('SELECT * FROM user', (err,rows) => {
-  if(err) throw err;
- 
-  console.log('Data received from Db:\n');
-  console.log(rows);
-});
- 
