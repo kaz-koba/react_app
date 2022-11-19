@@ -2,26 +2,17 @@ import logo from "./logo.svg";
 import "./App.css";
 import { click } from "./bad/bad1";
 
-function App() {
+const App = () => {
+  const userInputText1 = `javascript: alert('Warning!')`;
+
+  // locationオブジェクトへの操作も同様
+  // window.location.href = userInputText1;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <button onClick={click}></button>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <a href={`${userInputText1}/edit`}>link</a>
     </div>
   );
-}
+};
 
 export default App;
