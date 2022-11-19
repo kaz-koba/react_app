@@ -1,5 +1,6 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { click } from "./bad/bad1";
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <button onClick={}></button>
+        <button onClick={click}></button>
         <a
           className="App-link"
           href="https://reactjs.org"
