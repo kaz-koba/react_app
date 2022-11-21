@@ -2,7 +2,7 @@ import Express from "express";
 
 type ArticleResponse = { aaa: { title: string; body_html: string } };
 
-export async function getCliGuide(req: Express.Request, res: Express.Response) {
+export async function getT(req: Express.Request, res: Express.Response) {
   const slug = req.params.slug;
   try {
     const response = await fetch(`https://localhost:9000${slug}`);
